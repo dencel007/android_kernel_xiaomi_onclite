@@ -1,0 +1,17 @@
+# Xiaomi configuration options
+
+config MACH_XIAOMI_SDM632
+	bool "Xiaomi SDM632"
+	depends on ARCH_SDM632
+	help
+	  Support for SDM632 Xiaomi variants
+
+menu "Xiaomi board selection"
+
+config MACH_XIAOMI_ONCLITE
+	bool "Onclite board"
+	select MACH_XIAOMI_SDM632
+	help
+	  Support for Redmi 7
+
+endmenu
